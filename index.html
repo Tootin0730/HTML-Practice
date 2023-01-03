@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
+<>
 <form>
 <fieldset>
   <legend>Product</legend>
 
   <P><b>Choose your order</b></P>
-  <label><input type="checkbox">3kg</label>
-  <label><input type="checkbox">5kg</label>
-  <label><input type="checkbox">10kg</label>
+  <label><input type="checkbox" value="s_3">3kg</label>
+  <label><input type="checkbox" value="s_5">5kg</label>
+  <label><input type="checkbox" value="f_3">10kg</label>
 
   <P><b>Package</b></P>
   <label><input type="radio" name="gift" value="yes">gift</label>
@@ -44,6 +44,22 @@
       <label for="pw2">Confirm Password</label>
       <Input id="pw2" type="password"></Input>
     </li>    
+    <li>
+      <label for="path">Subscription path</label>
+      <select id="path">
+        <option value="blog" selected>Blog</option>
+        <option value="search">Search</option>
+        <option value="sns">SNS</option>
+        <option value="etc">etc.</option>
+      </select>
+      <li>
+        <label for="memo">Memo</label>
+        <textarea id="memo" cols="40" rows="5" placeholder="Write your comments"></textarea>
+      </li>   
+
+    </li>   
+
+
   </ul>
 </fieldset>
 <fieldset>
@@ -52,23 +68,71 @@
   <label><input type="radio" name="event" value="no">No email</input></label>
 </fieldset>
 </form>
-
 </div>
 
 
+<ul>
+<li>
+  <label><input type="checkbox" value="s_3">3kg</label>
+  <input type="number" min="1" max="5" value="1">(max 5)
+</li>
+<li>
+  <label><input type="checkbox" value="s_5">5kg</label>
+  <input type="number" min="1" max="3" value="1">(max 3)
+</li>
+</ul>
+
+<ul>
+  <li>
+    <label><input type="checkbox" value="s_3">3kg</label>
+    <input type="range" min="1" max="5" value="1">(max 5)
+  </li>
+  <li>
+    <label><input type="checkbox" value="s_5">5kg</label>
+    <input type="range" min="1" max="3" value="1">(max 3)
+  </li>
+  </ul>
+
+<H1>Set Date</H1>
+<input type="date">
+<input type="month">
+<input type="week">
+<input type="time">
+<input type="datetime-local">
 
 
-
-
-
-
-
-
-
-
-
-
-
+<form>
+  <fieldset>
+    <legend>Delivery Information</legend>
+<ul>
+  <li>
+    <label for="uname">Name</label>
+    <input id="uname" type="text" placeholder="Write your name" autofocus required>
+  </li>
+  <li>
+    <label for="uaddr">Address</label>
+    <input id="uaddr" type="addr" placeholder="Write your address">
+  </li>
+  <li>
+    <label for="umail">Email</label>
+    <input id="umail" type="email" placeholder="Write your email">
+  </li>
+  <li>
+    <label for="uph">Phone Number</label>
+    <input id="uph" type="tel" placeholder="Write your phone number">
+  </li>
+  <li>
+    <label for="ddate">Delivery Date(at least 3 days from order date)</label>
+    <input id="ddate" type="date">
+  </li>
+</ul>
+<div>
+  <input type="submit" value="order">
+  <input type="reset" value="cancel">
+</div>
+  </fieldset>
+</form>
+<input type="file">
 
 
 
